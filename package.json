@@ -1,0 +1,20 @@
+{
+  "name": "ds-next",
+  "version": "1.0.0",
+  "description": "Next.js client for displaying shows, live events, and enabling purchases",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {
+    "next": "^10.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
+  }
+}
