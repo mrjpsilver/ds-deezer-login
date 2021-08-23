@@ -7,17 +7,18 @@ export default function Home({ appId }) {
   useEffect(() => {
     DZ.init({
       appId,
-      channelUrl: 'http://localhost:3000/channel.html'
+      channelUrl: 'http://localhost:3000/channel'
     });
   }, [])
 
   const handleLoginClick = () => {
     DZ.login(function(response) {
       if (response.authResponse) {
-        console.log('Welcome!  Fetching your information.... ');
-        DZ.api('/user/me', function(response) {
-          console.log('Good to see you, ' + response.name + '.');
-        });
+        console.log('Welcome!  Fetching your information.... ')
+        console.log('AUTHRESPONSE', response.authResponse)
+        DZ.api('/user/me', function(meResponse) {
+          console.log('Good to see you, ' + meResponse.name + '.');
+        })
       } else {
         console.log('User cancelled login or did not fully authorize.');
       }
